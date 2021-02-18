@@ -1,0 +1,23 @@
+#springCloud
+pom依赖 父项目spring-boot-starter-boot dependencyManagement管理 springcloud [Dalston.RELEASE版本]
+springboot父依赖 spring-cloud-dependencie
+服务端 eureka spring-cloud-starter-eureka-server
+客户端 spring-cloud-starter-eureka 配置 eureka.client.service-url.defaultZone
+LoadBalanced注解在RestTemplate上提供负载均衡作用
+
+#springCloudHystrix的使用【服务器容错保护】
+基于Netflix的开源框架Hystrix实现的
+添加spring-cloud-starter-hystrix依赖
+启动类中添加@EnableCircuitBreaker注解开启断路器功能
+控制器中添加注解@HystricxCommand注解,fallbackMethod指定短路方法处理异常程序，注意一点就是短路方法返回值以及入参必须保持一致
+Hystricx不仅可以短路保护，还能进行监控，被请求次数，每秒执行多少，请求成功多少失败多少等等；
+#监视也单独摘出来学一下
+添加依赖spring-boot-starter-actuator,直接访问该服务的/hystrix.stream地址实时打印出详细信息
+但是都是数据不够直观看出监视信息，搭建一个工程microservice-hystrix-dashboard
+拉入依赖spring-cloud-starter-hystrix-dashboard,以及spring-boot-starter-actuator
+
+#springCloudZull的使用
+
+
+#springCloudConfig的使用
+

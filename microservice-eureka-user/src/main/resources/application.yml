@@ -1,0 +1,11 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: miscroservice-eureka-user-hystrix #指定应用名称
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务的时候使用服务的IP地址,是否显示主机ip
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
