@@ -15,9 +15,19 @@ Hystricx不仅可以短路保护，还能进行监控，被请求次数，每秒
 添加依赖spring-boot-starter-actuator,直接访问该服务的/hystrix.stream地址实时打印出详细信息
 但是都是数据不够直观看出监视信息，搭建一个工程microservice-hystrix-dashboard
 拉入依赖spring-cloud-starter-hystrix-dashboard,以及spring-boot-starter-actuator
+访问工程/hystrix.stream填入需要监控的/hystrix.stream地址即可
 
+学习总结》系统使用springboot实现微服务开发，使用springcloudEureka实现注册中心以及服务的注册与发现，使用springcloudRibbon实现了服务间的负载均衡
+使用SpringCloudHystrix实现了线程的隔离与短路保护，从而设计出了基础架构
+
+
+#API网关服务
 #springCloudZull的使用
+添加依赖springboot-cloud-starter-zull，这里整合eureka服务开发
+配置核心yml，zuul.routes.order-serviceId详细配置【ZuulRoute静态类中】
+设置order-serviceId
 
 
-#springCloudConfig的使用
+#springCloudConfig的使用 分布式配置管理
+添加spring-cloud-config-server
 
