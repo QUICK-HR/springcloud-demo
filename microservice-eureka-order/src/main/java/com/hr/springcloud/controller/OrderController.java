@@ -16,7 +16,7 @@ public class OrderController {
      * 通过订单id查询订单信息
      */
     @GetMapping("/order/{id}")
-    public String findOrderById(@PathVariable String id){
+    public String findOrderById(@PathVariable String id) {
         Order order = new Order();
         order.setId("123");
         order.setPrice(23.5);
